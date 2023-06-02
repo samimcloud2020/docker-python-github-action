@@ -27,3 +27,6 @@ jobs:
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/packer:latest
       - name: Run Docker Container
         run: docker run -d -p 80:5000 --name c1 ${{ secrets.DOCKERHUB_USERNAME }}/packer:latest
+      - name: curl
+        run: curl http://localhost:80
+        
