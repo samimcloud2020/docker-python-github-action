@@ -26,5 +26,4 @@ jobs:
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/packer:latest
       - name: Run Docker Container
-        run: |
-        docker run -d -p 80:5000 --name c1 ${{ secrets.DOCKERHUB_USERNAME }}/packer:latest
+        run: docker run -d -p 80:5000 --name c1 ${{ secrets.DOCKERHUB_USERNAME }}/packer:latest
