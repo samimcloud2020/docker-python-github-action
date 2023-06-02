@@ -28,5 +28,7 @@ jobs:
       - name: Run Docker Container
         run: docker run -d -p 5000:5000 --name c1 ${{ secrets.DOCKERHUB_USERNAME }}/packer:latest
       - name: curl
-        run: curl http://localhost:5000
+        uses: wei/curl@master
+        with:
+          args: http://localhost:5000/
         
